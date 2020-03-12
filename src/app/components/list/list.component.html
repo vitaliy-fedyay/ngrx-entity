@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card" *ngFor="let article of articleSub | async ; trackBy:trackByToodFun;">
+    <mat-card (click)="oneArticle(article.title, article.description)">
+      <span style="visibility: hidden">{{article.id}}</span>
+      <mat-card-header>
+        <mat-card-title>{{article.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{article.description}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="editArticle(article.id)">EDIT</button>
+        <button mat-button (click)="deleteArticle(article.id)">DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<mat-card class="container">
+
+  <mat-card-title class="title">Edit article</mat-card-title>
+
+  <form id="form" class="form" #form="ngForm" (ngSubmit)="editArticle(form)">
+
+    <mat-form-field class="full-width">
+      <mat-label>Enter title:</mat-label>
+      <input matInput type="text" placeholder="title" [(ngModel)]="articleDetail.title" name="title" id="title">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Enter description:</mat-label>
+      <input matInput type="text" placeholder="description" [(ngModel)]="articleDetail.description" name="description"
+        id="description">
+    </mat-form-field>
+    <br>
+    <br>
+
+    <button type="submit" mat-raised-button color="primary">Save</button>
+    <button type="submit" mat-raised-button [routerLink]="['/list']"
+      routerLinkActive="router-link-active">Cancel</button>
+  </form>
+
+</mat-card>
