@@ -11,7 +11,7 @@ import { ArticleService } from 'src/app/services/article.service';
 })
 export class ListComponent implements OnInit {
 
-  public articleSub;
+  public articleSub: Observable<Article>;
 
   constructor(
     private router: Router,

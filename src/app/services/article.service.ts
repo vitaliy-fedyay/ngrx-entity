@@ -35,7 +35,7 @@ export class ArticleService {
     this.store.dispatch(new ArticleActions.AddArticle(data));
   }
 
-  public list() {
+  public list(): any {
     this.store.pipe(select(this.allArticle));
   }
 
